@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <title>TypeTesting | Tomás Afonso</title>
 </head>
 
@@ -13,8 +14,23 @@
 
     <div class="container">
         <div class="stats">
-            <p>Tempo: <span id="timer">0s</span></p>
+            <p>Tempo restante: <span id="timer">0s</span></p>
             <p>Erros: <span id="mistakes">0</span></p>
+            <div class="language">
+                <select id="language-select" onchange="changeLanguage()">
+                    <option value="pt" selected>Português</option>
+                    <option value="en">English</option>
+                    <option value="es">Español</option>
+                    <option value="it">Italiano</option>
+                    <option value="de">Deutsch</option>
+                    <option value="fr">Français</option>
+                    <option value="cs">Čeština</option>
+                    <option value="sk">Slovenčina</option>
+                    <option value="pl">Polski</option>
+                    <option value="hu">Magyar</option>
+                    <option value="ru">Русский</option>
+                </select>
+            </div>
         </div>
         <div id="quote" onmousedown="return false" onselectstart="return false"></div>
 
@@ -28,11 +44,12 @@
             <div class="wrapper">
                 <p>Precisão: <span id="accuracy"></span></p>
                 <p>Velocidade: <span id="wpm"></span></p>
+                <p><span id="refresh"></span></p>
             </div>
         </div>
 
     </div>
-
+    <footer>Feito por <a id="afooter" href="https://thomraider12.github.io/portfoliotomas">Tomás Afonso</a>. 2024</footer>
     <script src="script.js"></script>
 </body>
 
